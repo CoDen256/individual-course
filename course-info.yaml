@@ -8,6 +8,33 @@ summary: |-
   - It contains hands-on examples of Java code implementation and exercises to practice new skills.
   - The course is based on the author's personal experience in Java development.
   - Love you
+  - 
+  - Variables,
+  - Values vs Statements
+  - Immutabiity, Mutability
+  - Conditions, Primitive types
+  - Structure
+  - Flow of Control, Visibility, Oder of execution
+  - Visibility Scope (Block, Method, Class)
+  - References vs Values
+  - Pass-By-Value Pass-By-Reference
+  - Classes 
+  - Methods. Input, Output, Blackbox, Sideeffect, Pure functions , Function composition
+  - static, dynamic
+  - Operators, Methods
+  - JVM, Compilation, Bytecode, Jar
+  - Types, Polymorphism, values, references
+  - Software Design, Abstraction,
+  - 1 Order Function 
+  
+  
+
+  - 0. Testing
+  - 1. OSI
+  - 2. Wireshark
+  - 3. HTTP
+
+
 programming_language: Java
 content:
   - lesson1
