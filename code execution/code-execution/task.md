@@ -152,6 +152,8 @@ Here for example is two possible compilation paths from source code to execution
 Assembly usually considered as intermediate step, which is done within compilers (both for real CPU and VMs)
 So it's mostly produces the executable code/byte code directly from source code.
 
+
+
 ![img_3.png](img_3.png)
 
 
@@ -203,5 +205,9 @@ Reverse Engineering
 | Java Decompiler   (FernFlower, etc..) | JVM Bytecode `.class  `  / Human readable bytecode | Source code `.java`     |
 
 
+<div class="hint">
+  Don't forget: ASSEMBLY = MACHINE CODE. It's a 1-to-1 mapping. <br>
+  Don't forget: Human READABLE bytecode = BYTECODE. It's a 1-to-1 mapping.
+</div>
 
 Python code how?

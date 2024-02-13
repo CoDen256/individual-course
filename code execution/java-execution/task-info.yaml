@@ -1,6 +1,10 @@
-type: output
+type: edu
 files:
-  - name: src/Task.java
+  - name: src/Answers.java
+    visible: true
+  - name: src/ToBeCompiled.java
     visible: true
   - name: test/Tests.java
     visible: false
+  - name: src/ToBeCompiled.class
+    visible: true
