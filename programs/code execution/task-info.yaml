@@ -1,0 +1,10 @@
+type: theory
+files:
+  - name: img.png
+    visible: true
+  - name: img_2.png
+    visible: true
+  - name: img_1.png
+    visible: true
+  - name: img_3.png
+    visible: true

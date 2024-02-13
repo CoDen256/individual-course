@@ -8,12 +8,12 @@ options:
 files:
   - name: src/Main.java
     visible: true
-  - name: img.png
+  - name: ../code execution/img.png
     visible: true
-  - name: img_2.png
+  - name: ../code execution/img_2.png
     visible: true
-  - name: img_1.png
+  - name: ../code execution/img_1.png
     visible: true
-  - name: img_3.png
+  - name: ../code execution/img_3.png
     visible: true
 local_check: true

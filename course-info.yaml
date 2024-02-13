@@ -16,5 +16,5 @@ summary: "This is an introductory Java course.\n- The course will be most benefi
   \n\n\n- 0. Testing\n- 1. OSI\n- 2. Wireshark\n- 3. HTTP"
 programming_language: Java
 content:
-  - execution
+  - programs
   - visibility
