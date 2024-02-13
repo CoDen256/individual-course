@@ -155,33 +155,46 @@ So it's mostly produces the executable code/byte code
 
 To sum it up: <br>
 
-
-
 <h2> JVM </h2>
-We are dealing with a particular VM, namely Java Virtual Machine <br>
+We are dealing here with a particular VM, namely Java Virtual Machine <br>
+Java
+
+|                                       | Input                                                                    | Output                                                                     |
+|---------------------------------------|--------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| Java VM (`java`)                      | Bytecode (`.class` files) - `0x1`                                        | **_CPU Machine code_** - `0x40`  <br> AND <br> _**Execution**_ of the code |
+| Java Compiler (`javac`)               | Source code (`.java` files) - `i++`                                      | Bytecode (`.class` files) - `0x1`                                          |
+|                                       |                                                                          |                                                                            |
+| Java Assembler (not usually used)     | ???                                                                      | Bytecode (`.class` files) - `0x1`                                          |
+| Java Disassembler (`javap`)           | JVM Bytecode (`.class  ` files)                                          | Human readable bytecode  (e.g. `iinc`)                                     |
+| Java Decompiler   (FernFlower, etc..) | JVM Bytecode (`.class  ` files) / Human readable bytecode  (e.g. `iinc`) | Source code (e.g. .java `i++`)                                             |
 
 
+<h2> Sum Up: </h2>
 
+Forward Engineering:
 
-To sum it up:
+|                         | Input                               | Output                                                                     |
+|-------------------------|-------------------------------------|----------------------------------------------------------------------------|
+| CPU                     | Machine code  - `0x40`              | Execution of instructions - `Increment by 1`                               |
+| Assembler               | Assembly code - `INC`               | Machine code - `0x40`                                                      |
+| Compiler                | Source code - `i++`                 | Assembly code - `INC`                                                      |
+|                         |                                     |                                                                            |
+| VM                      | Bytecode  - `0x1`                   | **_CPU Machine code_** - `0x40`  <br> AND <br> _**Execution**_ of the code |
+| Assembler (VM)          | Human readable bytecode - `iinc`    | Bytecode - `0x1`                                                           |                                                          |
+| Compiler (VM)           | Source code - `i++`                 | Human readable bytecode  - `iinc`                                          |                                                           |
+|                         |                                     |                                                                            |
+| Java VM (`java`)        | Bytecode (`.class` files) - `0x1`   | **_CPU Machine code_** - `0x40`  <br> AND <br> _**Execution**_ of the code |
+| Java Compiler (`javac`) | Source code (`.java` files) - `i++` | Bytecode (`.class` files) - `0x1`                                          |
 
+Reverse Engineering
 
-|                     | Input                                                      | Output                                                     |
-|---------------------|------------------------------------------------------------|------------------------------------------------------------|
-| Assembler for VM    | Human readable bytecode  (e.g. `iinc`)                     | Bytecode for VM (e.g. for JVM : `0x10` )                   |                                                          |
-| Disassembler for VM | Bytecode for VM (e.g. for JVM : `0x10` )                   | Human readable bytecode  (e.g. `iinc`)                     |
-| Compiler for VM     | Source code (e.g. .java `i++`)                             | Intermediate assembly code for VM (e.g. for JVM : `iinc` ) |                                                           |
-| Decompiler for VM   | Intermediate assembly code for VM (e.g. for JVM : `iinc` ) | Source code (e.g. .java `i++`)                             |
-| Virtual Machine Input  | **_Bytecode_** (VM's machine code) (some generic machine code (same for all VMs) (you can come up with your own)) |
-| Virtual Machine Output | **_Machine code_** for the target CPU <br> **AND** <br> _**Execution**_ of this produced code on the target CPU.  |
-| Compiler   | source code (e.g. in C `i++`) | assembly code (`INC`)                 |
-| Decompiler | assembly code (`INC`)         | source code (e.g. in C `i++` )        |
-| Assembler    | Assembly code (e.g. `INC`) | Machine Code (e.g. `0x40`) |
-| Disassembler | Machine code (e.g. `0x40`) | Assembly Code (e.g. `INC`) |
-| CPU Input      | Instruction in binary (machine code) (e.g. `0x40`)         |
-|----------------|------------------------------------------------------------|
-| **CPU Output** | **Executing the instruction (e.g. `Increment by 1`)** <br> |
-
-
-Human
-`javap -c Main.class`
+|                                       | Input                                                                    | Output                                 |
+|---------------------------------------|--------------------------------------------------------------------------|----------------------------------------|
+| Disassembler                          | Machine code - `0x40`                                                    | Assembly code - `INC`                  |
+| Decompiler                            | Machine code - `0x40` / Assembly code - `INC`                            | Source code - `i++`                    |
+|                                       |                                                                          |                                        |
+| Disassembler (VM)                     | Bytecode for VM - `0x10`                                                 | Human readable bytecode  (e.g. `iinc`) |
+| Decompiler (VM)                       | Bytecode for VM - `0x10`  / Human readable bytecode  (e.g. `iinc`)       | Source code (e.g. .java `i++`)         |
+|                                       |                                                                          |                                        |
+| Java Disassembler (`javap`)           | JVM Bytecode (`.class  ` files)                                          | Human readable bytecode  (e.g. `iinc`) |
+| Java Decompiler   (FernFlower, etc..) | JVM Bytecode (`.class  ` files) / Human readable bytecode  (e.g. `iinc`) | Source code (e.g. .java `i++`)         |
