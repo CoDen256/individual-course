@@ -1,0 +1,13 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: Correct
+    is_correct: true
+  - text: Incorrect
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+  - name: src/Main.class
+    visible: true
+local_check: true
