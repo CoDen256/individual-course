@@ -13,21 +13,21 @@ public class Tests {
 
   @Test
   public void a() {
-    assertRightAnswer(a, answers.a);
+    assertRightAnswer(a, answers.a, "a");
   }
 
   @Test
   public void b() {
-    assertRightAnswer(b, answers.b);
+    assertRightAnswer(b, answers.b, "b");
   }
 
   @Test
   public void c() {
-    assertRightAnswer(c, answers.c);
+    assertRightAnswer(c, answers.c, "c");
   }
 
-  public void assertRightAnswer(String expected, String origin){
+  public void assertRightAnswer(String expected, String origin, String test){
     String expected2 = new String(Base64.getDecoder().decode(expected));
-    assertTrue(expected2.equals(origin));
+    assertTrue("Answer "+test +" is wrong", expected2.equals(origin));
   }
 }
