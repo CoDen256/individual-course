@@ -11,7 +11,7 @@ public class AnswersTest {
 
   String a = "Mg==";
   String b = "NDogaWFkZA==";
-  String c = "";
+  String c = "s";
   Answers answers = new Answers();
 
   @Test
