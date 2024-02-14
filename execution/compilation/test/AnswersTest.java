@@ -19,7 +19,9 @@ public class AnswersTest {
   public static Stream<Arguments> questions(){
     return Stream.of(
            question("A", "Mg=="),
-           question("B", "NDogaWFkZA==")
+           question("B", "NDogaWFkZA=="),
+           question("C", "NDogaWFkZA=="),
+           question("D", "NDogaWFkZA==")
     );
   }
 }

@@ -1,6 +1,7 @@
 package utils;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import org.junit.jupiter.params.provider.Arguments;
 import java.lang.reflect.Field;
@@ -20,10 +21,21 @@ public class AnswerCheckUtils {
     }
 
     public static String getUserAnswer(String question, Object submission) throws NoSuchFieldException, IllegalAccessException {
-        Class<?> userAnswers = submission.getClass();
-        Field declaredField = userAnswers.getDeclaredField(question);
-        declaredField.setAccessible(true);
-        return declaredField.get(submission).toString();
+        try {
+            Class<?> userAnswers = submission.getClass();
+            Field declaredField = userAnswers.getDeclaredField(question);
+            declaredField.setAccessible(true);
+            return declaredField.get(submission).toString();
+        } catch (NoSuchFieldException e){
+            fail(noAnswerMessage(question));
+            throw new AssertionError("unreachable");
+        }
+    }
+
+    private static String noAnswerMessage(String question) {
+        return String.format("You have not provided an answer for question [%s]! Declare and define a field like this" +
+                "\n\t\t\t\tString %s = \"<Your answer goes here>\";\n"
+                , question, question);
     }
 
     public static Arguments question(String question, String answer){
