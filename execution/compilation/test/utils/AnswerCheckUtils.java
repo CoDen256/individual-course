@@ -10,7 +10,18 @@ import java.util.Base64;
 public class AnswerCheckUtils {
     private AnswerCheckUtils(){}
 
-    public static void verifyCorrectAnswer(Question question, Object userAnswers) throws NoSuchFieldException, IllegalAccessException {
+    static Object userAnswers;
+
+    static {
+        try {
+            userAnswers = Class.forName("Answers").getDeclaredConstructor().newInstance();
+        } catch (Exception e) {
+            throw new IllegalArgumentException("You have no class named 'Answers'!!! Create one! \nclass Answers {\n}\n");
+        }
+    }
+
+
+    public static void verifyCorrectAnswer(Question question) throws NoSuchFieldException, IllegalAccessException {
         String userAnswer = getUserAnswer(question.getQuestion(), userAnswers);
         String expected = new String(Base64.getDecoder().decode(question.getAnswer()));
         assertTrue(wrongAnswerMessage(question, userAnswer), expected.equals(userAnswer) );

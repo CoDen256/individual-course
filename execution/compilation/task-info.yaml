@@ -1,7 +1,5 @@
 type: edu
 files:
-  - name: src/Answers.java
-    visible: true
   - name: src/ToBeCompiled.java
     visible: true
   - name: test/AnswersTest.java
@@ -10,3 +8,5 @@ files:
     visible: false
   - name: test/utils/Question.java
     visible: false
+  - name: src/Answers2.java
+    visible: true

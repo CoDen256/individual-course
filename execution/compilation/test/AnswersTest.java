@@ -8,12 +8,11 @@ import utils.Question;
 import java.util.stream.Stream;
 
 public class AnswersTest {
-  Answers answers = new Answers();
 
   @ParameterizedTest
   @MethodSource("questions")
-  void answers(Question expected) throws NoSuchFieldException, IllegalAccessException {
-    verifyCorrectAnswer(expected, answers);
+  void answers(Question expected) throws NoSuchFieldException, IllegalAccessException, ClassNotFoundException {
+    verifyCorrectAnswer(expected);
   }
 
   public static Stream<Arguments> questions(){
