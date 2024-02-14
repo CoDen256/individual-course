@@ -8,5 +8,7 @@ files:
     visible: false
   - name: test/utils/Question.java
     visible: false
-  - name: src/Answers2.java
+  - name: src/Answers.java
     visible: true
+  - name: test/utils/AnswerCheckerTestTemplate.java
+    visible: false
