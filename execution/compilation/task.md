@@ -48,7 +48,7 @@ Steps: <br>
 
 
 - You will be given multiple questions that you have to answer in order to pass this task
-- Open [Answers](psi_element://Answers)
+- Open [Answers](file://execution/compilation/src/Answers.java)
 - Put your answers in the values of the variables. 
 - Run 'Check,' verify in the test results, what questions you have answered incorrectly.
 
