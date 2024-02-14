@@ -209,5 +209,3 @@ Reverse Engineering
   Don't forget: ASSEMBLY = MACHINE CODE. It's a 1-to-1 mapping. <br>
   Don't forget: Human READABLE bytecode = BYTECODE. It's a 1-to-1 mapping.
 </div>
-
-Python code how?

@@ -1,11 +1,17 @@
 public class Answers {
 
-    String A = "<output of the program>";
+    String A = "<place the numer of your choice here>";
 
-    // 'javap -c' output. Replace just <instruction>, without the line number.
-    String B = "4: <instruction>";
+    String B = "0";
 
-    String C = "<name of the variable>";
+    String C = "0";
 
-    String D = "'compile' or 'runtime' without quotes";
+    String D = "0";
+    String E = "0";
+    String F = "0";
+    String G = "0";
+    String H = "0";
+    String I = "0";
+    String J = "0,1,2,3,4";
+    String K = "0";
 }
