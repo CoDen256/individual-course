@@ -10,8 +10,8 @@ public class AnswersTest extends AnswerCheckerTestTemplate {
         return Stream.of(
                 question("A", "Mg=="),
                 question("B", "NDogaWFkZA=="),
-                question("C", "NDogaWFkZA=="),
-                question("D", "NDogaWFkZA==")
+                question("C", "dmFyMg=="),
+                question("D", "cnVudGltZQ==")
         );
     }
 }

@@ -18,7 +18,7 @@ The "compile-time" phase starts when `.java` file is fed to `javac` and produces
 
 <h3>Runtime</h3>
 The phase starts when JVM started executing the `.class` bytecode. <br>
-On this phase only runtime errors can occur.
+On this phase only runtime errors can occur. Which is kinda really hard to debug in comparison to compile time.
 
 
 ---
@@ -27,8 +27,10 @@ On this phase only runtime errors can occur.
 1. Compile 'ToBeCompiled.java' 
 2. Run the compiled bytecode (get .class)
 3. Observer the output
-4. Disassemble the compiled bytecode and look inside (get 'assembly')
-5. Decompile the compiled bytecode using IntelliJ IDEA (just open `.class` file) (get decompiled java code)
+4. Examine ToBeCompiled.java source code.
+5. Disassemble the compiled bytecode and look inside (get readable 'bytecode')
+6. Decompile the compiled bytecode using IntelliJ IDEA (just open `.class` file) (get decompiled java code)
+7. Compare source code with the decompiled code and disassembled code.
 
 
 <div class="hint">
@@ -37,8 +39,10 @@ Steps: <br>
 2. change to the `src` directory, where `Task.java` is located <br>
 3. run `javac ToBeCompiled.java` - to compile the .java source code <br>
 4. run `java ToBeCompiled` this will try to find `ToBeCompiled.class` in your directory and execute it. <br>
-5. 
+5. run `javap -c ToBeCompiled.class` to view the disassembled bytecode
 </div>
+
+---
 
 <h1>Questions</h1>
 
@@ -50,8 +54,9 @@ Steps: <br>
 
 
 
-<h2> A. </h2>
-<h2> B. </h2>
-<h2> C. </h2>
-<h2> D. </h2>
-What better error in terms of development on compile time or runtime?
+<h2> A. What is the output, when 'ToBeCompiled' is run? </h2>
+<h2> B. What instruction (from bytecode) corresponds to adding two numbers?</h2>
+Inspect the source code along with the disassembled bytecode.
+<h2> C. What is the name of the variable in the decompiled that corresponds to variable 'b' in .java</h2>
+Examine. ToBeCompiled.java and decompiled by Jetbrains ToBeCompiled.class. 
+<h2> D. What do you think is better? Catch error on compile time or runtime? </h2>
