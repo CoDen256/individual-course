@@ -4,7 +4,5 @@ files:
     visible: true
   - name: src/ToBeCompiled.java
     visible: true
-  - name: test/Tests.java
+  - name: test/AnswersTest.java
     visible: false
-  - name: src/ToBeCompiled.class
-    visible: true
