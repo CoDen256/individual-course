@@ -6,3 +6,7 @@ files:
     visible: true
   - name: test/AnswersTest.java
     visible: false
+  - name: test/utils/AnswerCheckUtils.java
+    visible: false
+  - name: test/utils/Question.java
+    visible: false

@@ -1,37 +1,25 @@
+import static utils.AnswerCheckUtils.question;
+import static utils.AnswerCheckUtils.verifyCorrectAnswer;
 
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
-import java.util.Base64;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import utils.Question;
+import java.util.stream.Stream;
 
 public class AnswersTest {
-
-//
-
-  String a = "Mg==";
-  String b = "NDogaWFkZA==";
-  String c = "s";
   Answers answers = new Answers();
 
-  @Test
-  public void a() {
-    assertTrue(true);
-    assertRightAnswer(a, answers.a, "a");
+  @ParameterizedTest
+  @MethodSource("questions")
+  void answers(Question expected) throws NoSuchFieldException, IllegalAccessException {
+    verifyCorrectAnswer(expected, answers);
   }
 
-  @Test
-  public void b() {
-    assertRightAnswer(b, answers.b, "b");
-  }
-
-  @Test
-  public void c() {
-    assertRightAnswer(c, answers.c, "c");
-  }
-
-  public void assertRightAnswer(String expected, String origin, String test){
-    String expected2 = new String(Base64.getDecoder().decode(expected));
-//    assertTrue("Answer "+test +" is wrong", expected2.equals(origin));
+  public static Stream<Arguments> questions(){
+    return Stream.of(
+           question("A", "Mg=="),
+           question("B", "NDogaWFkZA==")
+    );
   }
 }
