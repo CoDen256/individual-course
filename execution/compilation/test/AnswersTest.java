@@ -11,7 +11,7 @@ public class AnswersTest extends AnswerCheckerTestTemplate {
                 question("A", "Mg=="),
                 question("B", "NDogaWFkZA=="),
                 question("C", "dmFyMg=="),
-                question("D", "cnVudGltZQ==")
+                question("D", "Y29tcGlsZQ==")
         );
     }
 }

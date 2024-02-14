@@ -7,5 +7,5 @@ public class Answers {
 
     String C = "<name of the variable>";
 
-    String D = "'runtime' or 'compile'";
+    String D = "'compile' or 'runtime' without quotes";
 }
