@@ -91,10 +91,10 @@ I give you a python script. And I want to run it on my CPU.
 What you would need in theory to be able to run it. 
 Multiple answers allowed.
 
-1. Assembler
-2. Compiler
+1. Assembler is enough
+2. Compiler is enough
 3. Virtual Machine is enough
-4. Virtual Machine and a compiler for that VM
+4. Virtual Machine and a compiler for that VM are enough
 
 <h2> K. Java compiler produces</h2>
 
