@@ -1,27 +1,51 @@
 plan:
   execution:
-    - Compiler, Assembler, CPU
-    - VM
-    - Source code vs Bytecode vs machine code vs assembly code
-    - JVM, Java compiler
-    -
+    - Human -> Compiler -> Assembler -> CPU
+    - Human -> Compiler -> VM -> CPU
+    - source code vs bytecode vs machine code vs assembly code
+    - JVM and Java compiler
+    - compile time vs runtime
+
   variables:
-    - values, statements
-    - immutability, mutability
-    - pass by reference, pass by value
-  primitive types:
-    - int, bool, float
-  execution phases:
-    - static, dynamic
-    - compile time, runtime
-    - syntax error, compile error, runtime error
-    - order of initializing
+    compiler sees:
+      - declaration = starts of being visible
+      - initialisation = compiler can do some checks and prevent uninitialized access
+      - access = check that it is actually visible
+      - death = end of the block, no longer visible
+    JVM sees:
+      - declaration = address in memory is allocated for this variable for this type
+      - initialisation = value assigned to the address
+      - access = read/write value from the address memory
+      - death = no longer access, this address can be reused for something else
+
+  compile time:
+    - variable visibility
+    - assignment is ok, lvalue, rvalue, type is ok
+
+#  compile time:
+#    - static, dynamic
+#    - compile time, runtime
+#    - syntax error, compile error, runtime error
+#    - order of initializing
+#    - visibility
+#  runtime:
+
   structure:
-    - flow of control
+    - flow of control (dep: execution of something)
     - visibility:
         - block, method, control flow, class
         - static vs dynamic visibility
     - order of execution
+
+#  variables:
+#    - values, statements
+#    - immutability, mutability
+#    - pass by reference, pass by value
+
+  primitive types:
+    - int, bool, float
+
+
 
   classes:
     - methods
