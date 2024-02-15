@@ -80,7 +80,7 @@ Problem:
 Solutions:
 1. Compile the source code for each CPU separately
 
-![img.png](img.png)
+![img.png](res/img.png)
 
 2. Create a program, that acts as a different CPU ("fake"/**_"virtual" CPU_**)
   1. It takes some binary machine code (like a normal CPU) and executes it.
@@ -94,7 +94,7 @@ Solutions:
     3. We compile our source code to the machine code for virtual CPU.
     4. Virtual CPU accept the same machine code and translate it to the machine code of the real CPU, on which they are running.
 
-![img_2.png](img_2.png)
+![img_2.png](res/img_2.png)
 
 <h2> 4. Virtual Machines </h2>
 
@@ -147,14 +147,14 @@ The table is the same as with the other compilers and assemblers:
 <h2> Big Picture </h2>
 Here for example is two possible compilation paths from source code to execution for x86 CPU
 
-![img_1.png](img_1.png)
+![img_1.png](res/img_1.png)
 
 Assembly usually considered as intermediate step, which is done within compilers (both for real CPU and VMs)
 So it's mostly produces the executable code/byte code directly from source code.
 
 
 
-![img_3.png](img_3.png)
+![img_3.png](res/img_3.png)
 
 
 <h2> JVM </h2>

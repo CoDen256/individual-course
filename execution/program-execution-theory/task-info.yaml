@@ -1,0 +1,12 @@
+type: theory
+files:
+  - name: src/Ignore.java
+    visible: true
+  - name: res/img.png
+    visible: true
+  - name: res/img_1.png
+    visible: true
+  - name: res/img_2.png
+    visible: true
+  - name: res/img_3.png
+    visible: true
