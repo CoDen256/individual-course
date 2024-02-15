@@ -1,7 +1,5 @@
 content:
-  - execution
-  - execution-questions
-  - compilation
-  - task1
   - program-execution-theory
   - program-execution-quiz
+  - compilation
+  - task1

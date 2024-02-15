@@ -78,11 +78,11 @@ Problem:
 - Since the your machine code is only for x86, it cannot run on ARM CPU
 
 Solutions:
-1. Compile the source code for each CPU separately
+<h4> A. Compile the source code for each CPU separately </h4>
+Buuut. you now have to compile the same code for each CPU each time you wanna change it and give to your friends.
+<img src="res/img.png" alt="drawing" width="1500"/>
 
-![img.png](res/img.png)
-
-2. Create a program, that acts as a different CPU ("fake"/**_"virtual" CPU_**)
+<h4> B. Create a program, that acts as a different CPU ("fake"/"virtual" CPU) </h4>
   1. It takes some binary machine code (like a normal CPU) and executes it.
   2. The binary machine code (=instructions) for **_virtual CPU_** is the same for everyone.
     1. -> So everyone has the same "virtual" CPU and same instructions
@@ -94,7 +94,8 @@ Solutions:
     3. We compile our source code to the machine code for virtual CPU.
     4. Virtual CPU accept the same machine code and translate it to the machine code of the real CPU, on which they are running.
 
-![img_2.png](res/img_2.png)
+
+<img src="res/img_2.png" alt="drawing" width="250"/>
 
 <h2> 4. Virtual Machines </h2>
 
@@ -147,14 +148,14 @@ The table is the same as with the other compilers and assemblers:
 <h2> Big Picture </h2>
 Here for example is two possible compilation paths from source code to execution for x86 CPU
 
-![img_1.png](res/img_1.png)
+<img src="res/img_1.png" alt="drawing" width="350"/>
 
 Assembly usually considered as intermediate step, which is done within compilers (both for real CPU and VMs)
 So it's mostly produces the executable code/byte code directly from source code.
 
 
 
-![img_3.png](res/img_3.png)
+<img src="res/img_3.png" alt="drawing" width="350"/>
 
 
 <h2> JVM </h2>
@@ -164,7 +165,7 @@ Java Compiler skips the assembly code and generates bytecode directly from sourc
 However its possible to view the assembly code by disassembling the `.class` file
 
 
-|                   | CMD/Program                                                                       | Input                      | Output                                                |                    |
+|                   | CMD/Program                                                                       | Input                      | Output                                                | Example            |
 |-------------------|-----------------------------------------------------------------------------------|----------------------------|-------------------------------------------------------|--------------------|
 | Java VM           | `java`  (Comes with JDK)                                                          | Bytecode (`.class`)        | **_CPU Machine code_**  <br> AND <br> _**Execution**_ | `0x1`  -> `0x40`   |
 | Java Compiler     | `javac` (Comes with JDK)                                                          | Source code (`.java`)      | Bytecode (`.class`)                                   | `0x40` -> `0x1`    |

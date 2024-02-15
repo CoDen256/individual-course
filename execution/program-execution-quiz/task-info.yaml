@@ -1,6 +1,14 @@
 type: edu
 files:
   - name: src/Task.java
-    visible: true
+    visible: false
   - name: test/Tests.java
     visible: false
+  - name: test/utils/Question.java
+    visible: false
+  - name: test/utils/AnswerCheckUtils.java
+    visible: false
+  - name: test/utils/AnswerCheckerTestTemplate.java
+    visible: false
+  - name: src/Answers.java
+    visible: true
