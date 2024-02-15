@@ -4,16 +4,7 @@ summary: "This is an introductory Java course.\n- The course will be most benefi
   \ for beginner-level Java learners.\n- The course covers core Java features.\n-\
   \ It contains hands-on examples of Java code implementation and exercises to practice\
   \ new skills.\n- The course is based on the author's personal experience in Java\
-  \ development.\n- Love you\n- \n- Variables,\n- Values vs Statements\n- Conditions,\
-  \ Primitive types\n- static dynamic\n- compile time, runtime order of initializing\n\
-  \n\n- Structure\n- Flow of Control, Visibility, Oder of execution\n\n\n- Immutabiity,\
-  \ Mutability\n- Visibility Scope (Block, Method, Class)\n- References vs Values\n\
-  - Pass-By-Value Pass-By-Reference\n- Classes \n- Methods. Input, Output, Blackbox,\
-  \ Sideeffect, Pure functions , Function composition\n- static, dynamic\n- Operators,\
-  \ Methods\n- JVM, Compilation, Bytecode, Jar\n- Types, Polymorphism, values, references\n\
-  - Software Design, Abstraction,\n- 1 Order Function \n- refactoring\n- variables,\
-  \ functions\n- structure\n- visible input and output\n- dividing big into small\n\
-  \n\n\n- 0. Testing\n- 1. OSI\n- 2. Wireshark\n- 3. HTTP"
+  \ development.\n- Love you"
 programming_language: Java
 content:
   - execution

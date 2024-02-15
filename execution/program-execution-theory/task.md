@@ -175,6 +175,26 @@ However its possible to view the assembly code by disassembling the `.class` fil
 |                   |                                                                                   |                            |                                                       |                    |
 | Java Assembler    | (not usually used)                                                                | Human readable bytecode??? | Bytecode (`.class` )                                  | `0x1`              |
 
+
+<h2> Abstraction Levels </h2>
+Basically each higher level of abstraction is having less details than the previous<br>
+All software is built on principle, that we first do something really concrete and really precise.
+Then we build an abstraction on top of it; that simplifies some of the repetitive parts of this something concrete and precise, thus making the abstraction more about "what" to do, than "how" to do it.
+The abstraction is less precise and is much easier to understand but has less flexibility in terms what you can do. 
+
+
+1. Assembly(=machine code) is basically the lowest level. It describes precisely HOW to do it. Each small step, that your CPU has to perform. You have limitless control over where your CPU does. But you also have pain in the ass when programming even something very simple. Because you have to tell CPU excatly HOW to do it.
+2. C source code is basically a little bit higher. By writing one line in C, it corresponds to ten lines in assembly. You have less power to control the registers of your CPU, but you still can program and define stuff. We say C is more "declarative (what to do?)"/abstract than "Assembly". Assembly is more imperative/concrete/(how to do it?) than C
+3. Every function you define in C that composes other functions is also kinda have a little higher abstraction level. Suppose you have 5 lines in C, that correspond to 10 lines in assembly. You write a function which contains 5 lines. Now you have one line(call of a function) that translates to 5 lines of C, that translates to 10 lines in assembly. This function is also more declarative but less flexible. You kinda can do only one operation with this single function.
+4. Python is even more declarative (more abstract). It hides even more concrete stuff, done in C, and focuses more on telling "WHAT" to do instead of "HOW". Now 1 line of code, produces e.g. 10 lines in C, which produces e.g. 20 lines in assembly.
+5. And so on and so forth. Each new level of abstraction abstract away the details, making it more declarative(less imperative) and has less control (in terms of how can you control single bits in your CPU)\
+6. And you can go further. You can create a new language, that abstracts some details done in Python. This language can be translated/compiled to the Python for example and have even less control over what you can do by simplifying everything.
+
+It applies as well for the whole programming as well. The whole program is a declaration of something, that hides its internal implementation. In software design you kinda Make the program out of a hierarchies. Your program is the highest level. Consists of a level a little bit lower. For example, just 5 calls of different functions (like with the Threads in your assignment), that describe very abstractly what they do. The functions has a level lower and in turn call other functions, which have even more implementation details and so forth.
+
+
+---
+
 <h2> Sum Up: </h2>
 
 Forward Engineering:

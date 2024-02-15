@@ -1,0 +1,55 @@
+plan:
+  execution:
+    - Compiler, Assembler, CPU
+    - VM
+    - Source code vs Bytecode vs machine code vs assembly code
+    - JVM, Java compiler
+    -
+  variables:
+    - values, statements
+    - immutability, mutability
+    - pass by reference, pass by value
+  primitive types:
+    - int, bool, float
+  execution phases:
+    - static, dynamic
+    - compile time, runtime
+    - syntax error, compile error, runtime error
+    - order of initializing
+  structure:
+    - flow of control
+    - visibility:
+        - block, method, control flow, class
+        - static vs dynamic visibility
+    - order of execution
+
+  classes:
+    - methods
+    - objects
+    - static methods
+    - type
+
+  methods:
+    - input, output, blackbox
+    - sideeffects, pure functions
+    - function composition
+    - operators
+  types:
+    - polymorphism
+    - values
+    - references
+    - software design
+    - abstraction
+  refactoring:
+    - extracting variables
+    - functions
+    - structure
+    - extracting input and output
+    - diving big into small
+  testing:
+    - unit tests
+
+  OSI:
+    - Protocols, layers
+    - Wireshark
+    - HTTP
